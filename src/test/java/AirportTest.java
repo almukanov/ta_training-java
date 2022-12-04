@@ -37,14 +37,14 @@ public class AirportTest {
     public void testGetTransportMilitaryPlanes() {
         Airport airport = new Airport(planes);
         List<MilitaryPlane> transportMilitaryPlanes = airport.getTransportMilitaryPlanes();
-        boolean flag = false;
+        boolean isMilitaryPlane = false;
         for (MilitaryPlane militaryPlane : transportMilitaryPlanes) {
             if ((militaryPlane.getType() == MilitaryType.TRANSPORT)) {
-                flag = true;
+                isMilitaryPlane = true;
                 break;
             }
         }
-        Assert.assertTrue(flag);
+        Assert.assertTrue(isMilitaryPlane, "Is military plane");
     }
 
     @Test
@@ -52,11 +52,11 @@ public class AirportTest {
         System.out.println("TEST testGetPassengerPlaneWithMaxCapacity started!");
         Airport airport = new Airport(planes);
         PassengerPlane expectedPlaneWithMaxPassengersCapacity = airport.getPassengerPlaneWithMaxPassengersCapacity();
-        Assert.assertEquals(planeWithMaxPassengerCapacity, expectedPlaneWithMaxPassengersCapacity);
+        Assert.assertEquals(planeWithMaxPassengerCapacity, expectedPlaneWithMaxPassengersCapacity,"Max capacity plane with passengers");
     }
 
     @Test
-    public void test3() {
+    public void testSortByCapacityOfPlane() {
         Airport airport = new Airport(planes);
         airport.sortByMaxLoadCapacity();
         List<? extends Plane> planesSortedByMaxLoadCapacity = airport.getPlanes();
@@ -70,7 +70,7 @@ public class AirportTest {
                 break;
             }
         }
-        Assert.assertTrue(nextPlaneMaxLoadCapacityIsHigherThanCurrent);
+        Assert.assertTrue(nextPlaneMaxLoadCapacityIsHigherThanCurrent, "Sorting test");
     }
 
     @Test
@@ -79,13 +79,12 @@ public class AirportTest {
         List<MilitaryPlane> bomberMilitaryPlanes = airport.getBomberMilitaryPlanes();
         for (MilitaryPlane militaryPlane : bomberMilitaryPlanes) {
             if (militaryPlane.getType() == MilitaryType.BOMBER) {
-                Assert.assertTrue(true);
+                Assert.assertSame(militaryPlane.getType(), MilitaryType.BOMBER,"Plain is a bomber plane");
             }
             else {
-                Assert.fail("Test failed!");
+                Assert.fail("Plane is not bomber");
             }
         }
-
     }
 
     @Test
