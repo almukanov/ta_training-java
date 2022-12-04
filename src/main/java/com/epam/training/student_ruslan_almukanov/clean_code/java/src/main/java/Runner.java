@@ -1,11 +1,8 @@
-package com.epam.training.student_ruslan_almukanov.clean_code.Java.src.main.java;
-
-
-import com.epam.training.student_ruslan_almukanov.clean_code.Java.src.main.java.plane.MilitaryPlane;
-import com.epam.training.student_ruslan_almukanov.clean_code.Java.src.main.java.plane.PassengerPlane;
-import com.epam.training.student_ruslan_almukanov.clean_code.Java.src.main.java.plane.Plane;
-import com.epam.training.student_ruslan_almukanov.clean_code.Java.src.main.java.model.MilitaryType;
-
+package com.epam.training.student_ruslan_almukanov.clean_code.java.src.main.java;
+import com.epam.training.student_ruslan_almukanov.clean_code.java.src.main.java.plane.MilitaryPlane;
+import com.epam.training.student_ruslan_almukanov.clean_code.java.src.main.java.plane.PassengerPlane;
+import com.epam.training.student_ruslan_almukanov.clean_code.java.src.main.java.plane.Plane;
+import com.epam.training.student_ruslan_almukanov.clean_code.java.src.main.java.model.MilitaryType;
 import java.util.Arrays;
 import java.util.List;
 
@@ -37,7 +34,6 @@ public class Runner {
         System.out.println("Passenger airport sorted by max speed: " + passengerAirport
                 .sortByMaxSpeed()
                 .toString());
-
         System.out.println("Plane with max passenger capacity: " + passengerAirport.getPassengerPlaneWithMaxPassengersCapacity());
     }
 }
