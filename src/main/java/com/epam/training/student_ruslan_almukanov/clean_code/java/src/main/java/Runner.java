@@ -1,4 +1,5 @@
 package com.epam.training.student_ruslan_almukanov.clean_code.java.src.main.java;
+import com.epam.training.student_ruslan_almukanov.clean_code.java.src.main.java.airport.Airport;
 import com.epam.training.student_ruslan_almukanov.clean_code.java.src.main.java.plane.MilitaryPlane;
 import com.epam.training.student_ruslan_almukanov.clean_code.java.src.main.java.plane.PassengerPlane;
 import com.epam.training.student_ruslan_almukanov.clean_code.java.src.main.java.plane.Plane;
