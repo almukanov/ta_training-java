@@ -1,7 +1,7 @@
 package com.epam.training.student_ruslan_almukanov.clean_code.java.src.main.java.plane;
 import java.util.Objects;
 
-abstract public class Plane {
+public abstract class Plane {
     private final String model;
     private final int maxSpeed;
     private final int maxFlightDistance;
